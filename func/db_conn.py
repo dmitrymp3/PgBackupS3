@@ -24,7 +24,6 @@ def do_backup(database, backup_filename):
 		logger.info(f'База данных {database} успешно сохранена {temp_path + "/" + backup_filename}')
 	except subprocess.CalledProcessError as e:
 		logger.critical(f'Ошибка при резервном копировании базы данных: {e}')
-		logger.critical(e.response)
 		logger.critical(repr(e))
 
 def check_db() -> bool:
