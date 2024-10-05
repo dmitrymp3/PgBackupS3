@@ -9,7 +9,6 @@ def do_backup(database, backup_filename):
 	Создает бэкап переданной базы данных, название передается вторым аргументом
 	"""
 	command = [
-       		'sudo', '-u', 'postgres',
         	'pg_dump',
 	        '-U', 'postgres',
 	        '-F', 'c',  # Формат: custom
